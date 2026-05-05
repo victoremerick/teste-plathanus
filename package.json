@@ -1,0 +1,13 @@
+{
+  "name": "central-inteligente-pedidos",
+  "version": "1.0.0",
+  "description": "Monorepo - Central Inteligente de Pedidos",
+  "private": true,
+  "workspaces": [
+    "apps/frontend"
+  ],
+  "scripts": {
+    "frontend": "npm run dev --workspace=apps/frontend",
+    "backend": "cd apps/backend-java && mvn spring-boot:run"
+  }
+}

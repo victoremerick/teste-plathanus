@@ -1,0 +1,230 @@
+/* Layout */
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  color: var(--text-h);
+}
+
+.app-header p {
+  color: var(--text);
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.app-section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: var(--text-h);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+/* Form */
+.pedido-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--text-h);
+  font-size: 0.95rem;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--text-h);
+  background: var(--bg);
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+}
+
+.form-btn {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.form-btn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.form-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* List */
+.list-status {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.list-error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.list-error p {
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.pedido-list {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Card */
+.pedido-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-id {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.85rem;
+  background: var(--accent-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.card-cliente {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.card-texto {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-style: italic;
+  margin: 0;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+}
+
+.card-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.card-meta-item dt {
+  font-size: 0.75rem;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-meta-item dd {
+  font-size: 0.9rem;
+  color: var(--text-h);
+  font-weight: 500;
+  margin: 0;
+}
+
+.card-itens {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card-item {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.item-qty {
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.item-unit {
+  color: var(--text);
+}
+
+.item-produto {
+  color: var(--text-h);
+}
+
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+  .form-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
